@@ -1,0 +1,38 @@
+﻿@model Traveller.Models.AddTripViewModel
+
+
+<form asp-controller="Trip" asp-action="Add" method="post">
+
+    <div class="form-group">
+        <label asp-for="Name"></label>
+        <input class="form-control" asp-for="Name" />
+        <span asp-validation-for="Name"></span>
+        </div>
+
+    <div class="form-group">
+        <label asp-for="State"></label>
+        <select class="form-control" asp-for="State" asp-items="Model.States"></select>
+        <span asp-validation-for="State"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="City"></label>
+        <input class="form-control" asp-for="City" />
+        <span asp-validation-for="City"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Airline"></label>
+        <input class="form-control" asp-for="Airline" />
+        <span asp-validation-for="Airline"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Lodging"></label>
+        <input class="form-control" asp-for="Lodging" />
+        <span asp-validation-for="Lodging"></span>
+    </div>
+
+    <input class="btn btn-default" type="submit" value="Add Trip" />
+
+</form>
