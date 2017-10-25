@@ -1,4 +1,4 @@
-﻿@model Traveller.Models.UserViewModel
+﻿@model List<Traveller.Models.Trip>
 
 
 @{
@@ -6,5 +6,29 @@
 
 }
 
+<h1>My Trips</h1>
 
+<table class="table">
 
+    <tr>
+        <th>Name</th>
+        <th>State</th>
+        <th>City</th>
+        <th>Airline</th>
+        <th>Lodging</th>
+    </tr>
+
+    @foreach (var trip in Model)
+    {
+        <tr>
+            <td>@trip.Name</td>
+            <td>@trip.State.Abbreviation</td>
+            <td>@trip.City</td>
+            <td>@trip.Airline</td>
+            <td>@trip.Lodging</td>
+            
+
+            <td><a asp-controller="User" asp-action="Edit" asp-route-TripId="@trip.ID" role="button" class="btn-sm btn-warning">Edit</a></td>
+        </tr>
+    }
+</table>

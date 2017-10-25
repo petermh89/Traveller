@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,6 +12,7 @@ using Traveller.Models;
 
 namespace Traveller.Controllers
 {
+    [Authorize]
     public class UserController : Controller
     {
         // GET: /<controller>/
@@ -23,9 +25,12 @@ namespace Traveller.Controllers
 
         public IActionResult Index()
         {
+            
             ApplicationUser User = context.Users.Single(u => u.Email == this.User.Identity.Name);
-            Trip myTrip = context.Trips.Find( m => m. == )
-            return View();
+    
+            IList<Trip> myTrips = context.Trips.Where(u => u.User == User).Include(c => c.State).ToList();
+            
+            return View(myTrips);
         }
     }
 }

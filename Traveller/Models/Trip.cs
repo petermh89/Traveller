@@ -17,7 +17,7 @@ namespace Traveller.Models
 
         public State State { get; set; }
 
-        //public List<State> States { get; set; }
+        
 
     }
 }

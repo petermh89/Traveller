@@ -41,7 +41,6 @@ namespace Traveller.Controllers
         public IActionResult Add(AddTripViewModel addTripViewModel)
         {
 
-
             if (ModelState.IsValid)
             {
                 State ChooseState = context.States.Single(s => s.ID == addTripViewModel.State);
