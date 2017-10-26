@@ -1,0 +1,31 @@
+﻿@model Traveller.Models.MyTripViewModel
+
+    <h1 align="center">@Model.Name </h1>
+
+<table class="table" align="center">
+
+    <tr>
+    <th>City</th>
+    <th>Airline</th>
+    <th>Lodging</th>
+    </tr>
+
+    <tr>
+        <td>@Model.City</td>
+        <td>@Model.Airline</td>
+        <td>@Model.Lodging</td>
+    </tr>
+</table>
+
+
+    <p> @Model.Plans</p>
+
+
+<br />
+<br />
+<form asp-controller="User" asp-action="Index" method="post">
+
+    
+    <input type="submit" value="My Trips" />
+</form>
+

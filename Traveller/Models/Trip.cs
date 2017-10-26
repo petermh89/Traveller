@@ -14,8 +14,9 @@ namespace Traveller.Models
         public string City { get; set; }
         public string Airline { get; set; }
         public string Lodging { get; set; }
-
         public State State { get; set; }
+        public string Plans { get; set; }
+      
 
         
 

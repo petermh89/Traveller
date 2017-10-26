@@ -2,7 +2,7 @@
 
 
 <form asp-controller="Trip" asp-action="Add" method="post">
-
+    <br />
     <div class="form-group">
         <label asp-for="Name"></label>
         <input class="form-control" asp-for="Name" />
@@ -32,6 +32,15 @@
         <input class="form-control" asp-for="Lodging" />
         <span asp-validation-for="Lodging"></span>
     </div>
+
+    
+        <label asp-for="Plans"></label>
+        <textarea class="form-control" asp-for="Plans"  type ="text"> </textarea>
+    <br />
+        
+    
+
+
 
     <input class="btn btn-default" type="submit" value="Add Trip" />
 

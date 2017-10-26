@@ -32,5 +32,13 @@ namespace Traveller.Controllers
             
             return View(myTrips);
         }
+
+        public IActionResult MyTrip(int tripId)
+        {
+            Trip viewTrip = context.Trips.Single(t => t.ID == tripId);
+
+            MyTripViewModel myTripView = MyTripViewModel.ViewTrip(viewTrip);
+            return View(myTripView);
+        }
     }
 }

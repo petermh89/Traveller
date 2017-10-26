@@ -27,9 +27,12 @@ namespace Traveller.Models
         [Display(Name = "Lodging")]
         public string Lodging { get; set; }
 
-        [Required(ErrorMessage = "You must enter your Lodging")]
+        [Required]
         [Display(Name = "State")]
         public int State { get; set; }
+
+        [Display(Name = "Itinerary")]
+        public string Plans { get; set; }
 
         
         
@@ -64,6 +67,7 @@ namespace Traveller.Models
                 City = addTripViewModel.City,
                 Airline = addTripViewModel.Airline,
                 Lodging = addTripViewModel.Lodging,
+                Plans = addTripViewModel.Plans,
                 State = ChooseState,
                 User = User
                 
