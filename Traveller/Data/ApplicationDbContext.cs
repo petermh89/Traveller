@@ -12,7 +12,7 @@ namespace Traveller.Data
     {
         public DbSet<State> States { get; set; }
         public DbSet<Trip> Trips { get; set; }
-
+        public DbSet<ProfilePhoto>ProfilePhotos { get; set; }
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
             : base(options)
         {

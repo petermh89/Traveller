@@ -2,7 +2,20 @@
     ViewData["Title"] = "Home Page";
 }
 
+
+
+
 <h1>Welcome to Traveller</h1>
+
+<form asp-controller="AddProfilePhoto" asp-action="Index" method="post">
+
+    <input type="submit" value="Upload Photo" />
+</form>
+<br />
+<br />
+
+
+
 
 <form asp-controller ="Trip" asp-action ="Add" method="post">
 
@@ -20,5 +33,19 @@
     </div>
     <input type="submit" value="Take me home" />
 </form>
+
+<br />
+<br />
+<form name="form" action="/uploadmultiple" enctype="multipart/form-data" method="post">
+
+    <div>
+        <label>Upload Documents</label>
+    </div>
+    <input id="files" name="files" type="file" multiple onchange="fileupload('files');" />
+    
+</form>
+<br />
+<script src="~/js/myjsfile.js"></script>
+
 
 

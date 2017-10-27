@@ -5,15 +5,27 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Traveller.Models;
+using System.Web;
+using Microsoft.AspNetCore.Http;
+using Traveller.Data;
 
 namespace Traveller.Controllers
 {
     public class HomeController : Controller
     {
+        private readonly ApplicationDbContext context;
+        public HomeController(ApplicationDbContext dbContext)
+        {
+            context = dbContext;
+        }
+
         public IActionResult Index()
         {
-            return View();
+           
+                return View();
         }
+
+       
 
         public IActionResult About()
         {
@@ -33,5 +45,10 @@ namespace Traveller.Controllers
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
+
+
+
+
+
     }
 }

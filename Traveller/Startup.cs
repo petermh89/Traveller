@@ -11,6 +11,8 @@ using Microsoft.Extensions.DependencyInjection;
 using Traveller.Data;
 using Traveller.Models;
 using Traveller.Services;
+using Microsoft.Extensions.FileProviders;
+using System.IO;
 
 namespace Traveller
 {
@@ -35,6 +37,8 @@ namespace Traveller
 
             // Add application services.
             services.AddTransient<IEmailSender, EmailSender>();
+
+            
 
             services.AddMvc();
         }
