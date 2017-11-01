@@ -9,48 +9,63 @@
 
 
 
+<div class="home-text">
+    <h1 align="center">My Trips</h1>
+    </div>
 
-<h1 align="center">My Trips</h1>
-
-@if (Model.Count == 0)
-{
-    <h1>You have no trips planned yet!</h1>
-
-    <form asp-controller="Trip" asp-action="Add" method="post">
-
-        <input type="submit" value="Plan a Trip!" />
-    </form>
-
-}
-
-
-else
-{
-<table class="table">
-
-    <tr>
-        <th>Name</th>
-        <th>State</th>
-        
-    </tr>
-
-    @foreach (var trip in Model)
+    @if (Model.Count == 0)
     {
-        <tr>
-            
-           
-            
-            <td><a asp-controller="User" asp-action="MyTrip" asp-route-tripId="@trip.ID"> @trip.Name</a></td>
-            <td>@trip.State.Abbreviation</td>
-            
+        <br />
+        <br />
+        <h1>You have no trips planned yet!</h1>
 
-            @*<td><a asp-controller="User" asp-action="Edit" asp-route-TripId="@trip.ID" role="button" class="btn-sm btn-warning">Edit</a></td>*@
-        </tr>
+        <form asp-controller="Trip" asp-action="Add" method="post">
+
+            <input type="submit" value="Plan a Trip!" />
+        </form>
+
     }
-</table>
-
-<br />
 
 
-}
+    else
+    {
+        <table class="table">
+
+            <tr>
+                <th>Name</th>
+                <th>State</th>
+
+            </tr>
+
+            @foreach (var trip in Model)
+            {
+                <tr>
+
+
+
+                    <td><a asp-controller="User" asp-action="MyTrip" asp-route-tripId="@trip.ID"> @trip.Name</a></td>
+                    <td>@trip.State.Name</td>
+
+
+                    
+                </tr>
+            }
+        </table>
+
+
+        <form>
+            <ul>
+                <li><a asp-controller="Trip" asp-action="Add">Plan a trip!</a></li>
+                <li><a asp-controller="Gallery" asp-action="Index">View My Gallery</a></li>
+                <li>
+                    <a asp-controller="Image" asp-action="Upload">Upload Photos</a>
+                </li>
+
+            </ul>
+
+        </form>
+        <br />
+
+
+    }
 

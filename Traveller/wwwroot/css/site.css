@@ -1,4 +1,76 @@
-﻿body {
+﻿.gallery-content{
+    padding: 24px;
+
+}
+.gallery-image{
+   
+    background-size: 100% 100%;
+    background-repeat:no-repeat;
+    background-position: center;
+    height: 280px;
+    width:280px;
+
+}
+
+.gallery-image-container {
+    padding: 8px;
+    background: #fff;
+    border-radius: 2px;
+    display: inline-block;
+    height: 300px;
+    width: 300px;
+    margin: 12px;
+    position: relative;
+    box-shadow: 0 10px 18px rgba(0,0,0,0.2), 0 5px 5px rgba(0,0,0,0.2);
+}
+.home-image {
+    padding: 8px;
+    background: #fff;
+    border-radius: 10px;
+    display: inline-block;
+    height: 465px;
+    width: 717px;
+    margin: 12px;
+    position: relative;
+    box-shadow: 0 10px 18px rgb(77, 182, 172), 0 5px 5px rgb(77, 182, 172);
+    top: 50%;
+    left: 50%;
+    margin-top: -20px;
+    margin-left: -350px;
+    float: left;
+    top: 50%;
+    left: 45%;
+}
+.home-text {
+    padding: 2px;
+    border-radius: 5px;
+    box-shadow: 0 10px 18px rgb(77, 182, 172), 0 5px 5px rgb(77, 182, 172);
+    position: relative;
+    float: left;
+    top: 50%;
+    left: 40%;
+    transform: translate(-20%, -20%);
+}
+
+.search-bar {
+    margin: 20px;
+    position: relative;
+    left: 30%;
+}
+
+.side-image {
+    float: left;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 2px;
+    border-radius: 5px;
+    box-shadow: 0 10px 18px rgb(77, 182, 172), 0 5px 5px rgb(77, 182, 172);
+    position: relative;
+}
+
+
+body {
     padding-top: 50px;
     padding-bottom: 20px;
 }

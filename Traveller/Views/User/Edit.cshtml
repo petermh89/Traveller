@@ -1,0 +1,41 @@
+﻿@model Traveller.Models.EditTripViewModel
+
+<h1>Edit Trip @Model.Name </h1>
+
+
+<form method="post">
+
+    <div class="form-group">
+        <label asp-for="Name"></label>
+        <input class="form-control" asp-for="Name" value="@Model.Name" />
+        <span asp-validation-for="Name"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="City"></label>
+        <Input class="form-control" asp-for="City" value="@Model.City"/>
+        <span asp-validation-for="City"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Airline"></label>
+        <Input class="form-control" asp-for="Airline" value="@Model.Airline" />
+        <span asp-validation-for="Airline"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Lodging"></label>
+        <Input class="form-control" asp-for="Lodging" value="@Model.Lodging" />
+        <span asp-validation-for="Lodging"></span>
+    </div>
+
+
+    <div class="form-group">
+        <label asp-for="Plans"></label>
+        <textarea class="form-control" asp-for="Plans">@Model.Plans</textarea>
+        <span asp-validation-for="Plans"></span>
+    </div>
+
+    <input asp-for="ID" type="hidden" value="@Model.ID" />
+    <input class="btn btn-default" type="submit" value="Save Edit " />
+
+</form>

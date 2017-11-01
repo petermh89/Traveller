@@ -11,9 +11,10 @@ using Traveller.Data;
 namespace Traveller.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20171031163605_gallery")]
+    partial class gallery
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -146,22 +147,6 @@ namespace Traveller.Data.Migrations
                     b.HasIndex("UserId");
 
                     b.ToTable("GalleryImages");
-                });
-
-            modelBuilder.Entity("Traveller.Data.Models.ImageTag", b =>
-                {
-                    b.Property<int>("ID")
-                        .ValueGeneratedOnAdd();
-
-                    b.Property<string>("Description");
-
-                    b.Property<int?>("ImageIdID");
-
-                    b.HasKey("ID");
-
-                    b.HasIndex("ImageIdID");
-
-                    b.ToTable("ImageTags");
                 });
 
             modelBuilder.Entity("Traveller.Models.ApplicationUser", b =>
@@ -307,13 +292,6 @@ namespace Traveller.Data.Migrations
                     b.HasOne("Traveller.Models.ApplicationUser", "User")
                         .WithMany()
                         .HasForeignKey("UserId");
-                });
-
-            modelBuilder.Entity("Traveller.Data.Models.ImageTag", b =>
-                {
-                    b.HasOne("Traveller.Data.Models.GalleryImage", "ImageId")
-                        .WithMany()
-                        .HasForeignKey("ImageIdID");
                 });
 
             modelBuilder.Entity("Traveller.Models.Trip", b =>

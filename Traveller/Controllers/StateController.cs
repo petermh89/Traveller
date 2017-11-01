@@ -72,6 +72,7 @@ namespace Traveller.Controllers
             los.Add("WV", "West Virginia");
             los.Add("WI", "Wisconsin");
             los.Add("WY", "Wyoming");
+            los.Add("M", "Middle Earth");
 
             foreach (KeyValuePair<string, string> state in los)
             {

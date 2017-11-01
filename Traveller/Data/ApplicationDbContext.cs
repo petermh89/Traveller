@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 using Traveller.Models;
+using Traveller.Data.Models;
 
 namespace Traveller.Data
 {
@@ -12,7 +13,9 @@ namespace Traveller.Data
     {
         public DbSet<State> States { get; set; }
         public DbSet<Trip> Trips { get; set; }
-        public DbSet<ProfilePhoto>ProfilePhotos { get; set; }
+        public DbSet<GalleryImage> GalleryImages { get; set; }
+        public DbSet<ImageTag> ImageTags { get; set; }
+
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
             : base(options)
         {

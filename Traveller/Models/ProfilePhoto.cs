@@ -14,9 +14,7 @@ namespace Traveller.Models
 
         public byte[] MyImage { get; set; }
 
-       
-
-
+        
 
 
     }

@@ -21,12 +21,20 @@
     <p> @Model.Plans</p>
 
 
+
+
 <br />
 <br />
-<form asp-controller="User" asp-action="Index" method="post">
+
+<form asp-controller="User" asp-action="Index" method="post" >
 
     
-    <input type="submit" value="My Trips" />
+    <input type="submit" value="My Trips"  class="btn-sm btn-warning"/>
+</form>
+<br />
+
+<form>
+    <a asp-controller="User" asp-action="Edit" asp-route-tripId="@Model.ID" role="button" class="btn-sm btn-warning">Edit</a>
 </form>
 <script src="~/js/myjsfile.js"></script>
 

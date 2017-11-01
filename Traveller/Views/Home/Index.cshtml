@@ -1,51 +1,44 @@
-﻿@{
+﻿@model IList<Traveller.Models.ProfilePhoto>
+
+@*@{
     ViewData["Title"] = "Home Page";
-}
+}*@
 
 
-
-
-<h1>Welcome to Traveller</h1>
-
-<form asp-controller="AddProfilePhoto" asp-action="Index" method="post">
-
-    <input type="submit" value="Upload Photo" />
-</form>
-<br />
-<br />
-
-
-
-
-<form asp-controller ="Trip" asp-action ="Add" method="post">
-
-    <div>
-        <label>Plan a Trip!</label>
+<div class="traveller-text">
+<div class="home-text">
+<h1>Traveller</h1>
     </div>
-    <input type="submit" value="Start planning!" />
-</form>
-<br />
-<br/>
-<form asp-controller="User" asp-action="Index" method="post">
-
-    <div>
-        <label>My Profile</label>
     </div>
-    <input type="submit" value="Take me home" />
-</form>
+<br />
+<br />
+<br />
+<br />
 
-<br />
-<br />
-<form name="form" action="/uploadmultiple" enctype="multipart/form-data" method="post">
 
-    <div>
-        <label>Upload Documents</label>
-    </div>
-    <input id="files" name="files" type="file" multiple onchange="fileupload('files');" />
-    
-</form>
+<div  class="search-bar">
+    <table>
+        <tr>
+            <td>
+                <label>Search for trips!</label>
+                <form asp-controller="User" asp-action="Search" name="searchString">
+
+                    <input type="search" name="searchString" />
+                    <input type="submit" value="Search" />
+                </form>
+            </td>
+        </tr>
+    </table>
+</div>
 <br />
-<script src="~/js/myjsfile.js"></script>
+<br />
+<div class="home-image">
+    <img src="http://zenpsychiatry.com/wp-content/uploads/2014/02/longroad.jpg"/>
+</div>
+
+
+
+@*<script src="~/js/myjsfile.js"></script>*@
 
 
 

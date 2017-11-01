@@ -38,7 +38,7 @@ namespace Traveller
             // Add application services.
             services.AddTransient<IEmailSender, EmailSender>();
 
-            
+            //services.AddScoped<IImage, ImageService>();
 
             services.AddMvc();
         }
